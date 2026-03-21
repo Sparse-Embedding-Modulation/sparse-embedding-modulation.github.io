@@ -1,80 +1,52 @@
-# Academic Project Page Template
+# SEM: Sparse Embedding Modulation for Post-Hoc Debiasing of Vision-Language Models
 
-> **Update (September 2025)**: This template has been modernized with better design, SEO, and mobile support. For the original version, see the [original-version branch](https://github.com/eliahuhorwitz/Academic-project-page-template/tree/original-version).
+> **CVPR Findings 2026**
 
-A clean, responsive template for academic project pages.
+**[Quentin Guimard](https://mardgui.github.io/)<sup>1,\*</sup> · [Federico Bartsch](https://www.linkedin.com/in/federico-bartsch/)<sup>1,\*</sup> · [Simone Caldarella](https://simonecaldarella.github.io/)<sup>1</sup> · [Rahaf Aljundi](https://www.linkedin.com/in/rahaf-aljundi/)<sup>2</sup> · [Elisa Ricci](https://eliricci.eu/)<sup>1,3</sup> · [Massimiliano Mancini](https://mancinimassimiliano.github.io/)<sup>1</sup>**
 
+<sup>**1**</sup>University of Trento · <sup>**2**</sup>Toyota Motor Europe · <sup>**3**</sup>Fondazione Bruno Kessler
 
-Example project pages built using this template are:
-- https://horwitz.ai/probex
-- https://vision.huji.ac.il/probegen
-- https://horwitz.ai/mother
-- https://horwitz.ai/spectral_detuning
-- https://vision.huji.ac.il/ladeda
-- https://vision.huji.ac.il/dsire
-- https://horwitz.ai/podd
-- https://dreamix-video-editing.github.io
-- https://horwitz.ai/conffusion
-- https://horwitz.ai/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad
-- https://vision.huji.ac.il/deepsim
+_<sup>\*</sup>Equal contribution_
 
+---
 
+[![Project Page](https://img.shields.io/badge/Project%20Page-sparse--embedding--modulation.github.io-blue?style=flat-square)](https://sparse-embedding-modulation.github.io/)
+[![Paper](https://img.shields.io/badge/arXiv-2603.19028-b31b1b?style=flat-square)](https://arxiv.org/abs/2603.19028)
+[![Code](https://img.shields.io/badge/Code-GitHub-green?style=flat-square)](https://github.com/mardgui/SEM)
+[![License](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey?style=flat-square)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-## Start using the template
-To start using the template click on `Use this Template`.
+---
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+## About This Repository
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+> **This is the repository for the [project website](https://sparse-embedding-modulation.github.io/) only.**
+> The paper code is available at **[github.com/mardgui/SEM](https://github.com/mardgui/SEM)**.
 
-## What's New
+---
 
-- Modern, clean design with better mobile support
-- Improved SEO with proper meta tags and structured data
-- Performance improvements (lazy loading, optimized assets)
-- More Works dropdown
-- Copy button for BibTeX citations
-- Better accessibility
+## Abstract
 
-## Components
+Models that bridge vision and language, such as CLIP, are key components of multimodal AI. Yet, their large-scale, uncurated training data introduces severe **social and spurious biases**. Existing post-hoc debiasing methods often operate directly in the dense CLIP embedding space, where bias and task-relevant information are highly _entangled_—making it difficult to remove bias without degrading semantic fidelity.
 
-- Teaser video
-- Image carousel
-- YouTube video embedding
-- Video carousel
-- PDF poster viewer
-- BibTeX citation
+In this work, we propose **Sparse Embedding Modulation (SEM)** — a post-hoc, zero-shot debiasing framework that operates in a Sparse Autoencoder (SAE) latent space. By decomposing CLIP text embeddings into _disentangled_ features, SEM can pinpoint and modulate bias-relevant neurons while safely preserving query-relevant ones.
 
-## Customization
+This approach enables more precise, non-linear interventions. Across four benchmark datasets and two CLIP backbones, SEM achieves **substantial fairness gains** in retrieval and zero-shot classification, demonstrating that sparse latent representations provide a highly effective foundation for debiasing vision-language models.
 
-The HTML file has TODO comments showing what to replace:
+---
 
-- Paper title, authors, institution, conference
-- Links (arXiv, GitHub, etc.)
-- Abstract and descriptions  
-- Videos, images, and PDFs
-- Related works in the dropdown
-- Meta tags for SEO and social sharing
+## BibTeX
 
-### Meta Tags
-The template includes meta tags for better search engine visibility and social media sharing. These appear in the `<head>` section and help with:
-- Google Scholar indexing
-- Social media previews (Twitter, Facebook, LinkedIn)
-- Search engine optimization
+```bibtex
+@inproceedings{guimardbartsch2026sem,
+  title={{SEM: Sparse Embedding Modulation for Post-Hoc Debiasing of Vision-Language Models}},
+  author={Guimard, Quentin and Bartsch, Federico and Caldarella, Simone and Aljundi, Rahaf and Ricci, Elisa and Mancini, Massimiliano},
+  booktitle={Findings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2026}
+}
+```
 
-Create a 1200x630px social preview image at `static/images/social_preview.png`.
+---
 
-## Tips
+## Website
 
-- Compress images with [TinyPNG](https://tinypng.com)
-- Use YouTube for large videos (>10MB)  
-- Replace the favicon in `static/images/`
-- Works with GitHub Pages
-
-## Acknowledgments
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
-
-## Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+This site is built on the [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template) and licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
