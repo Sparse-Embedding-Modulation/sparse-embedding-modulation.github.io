@@ -19,8 +19,8 @@ _<sup>\*</sup>Equal contribution_
 
 ## About This Repository
 
-> **This is the repository for the [project website](https://sparse-embedding-modulation.github.io/) only.**
-> The paper code is available at **[github.com/mardgui/SEM](https://github.com/mardgui/SEM)**.
+> **This is the repository for the [project page](https://sparse-embedding-modulation.github.io/) only.**
+> The SEM code is available at **[github.com/mardgui/SEM](https://github.com/mardgui/SEM)**.
 
 ---
 
